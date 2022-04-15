@@ -23,3 +23,16 @@ accountBtnEle.onclick = () => {
 closeAccountBtnEle.onclick = () => {
     userAccountEle.classList.remove('active');
 }
+
+// My Orders
+let orderBtnEle = document.querySelector('#order-btn');
+let myOrdersEle = document.querySelector('.my-orders');
+let closeOrdersBtnEle = document.querySelector('#close-orders');
+
+orderBtnEle.onclick = () => {
+    myOrdersEle.classList.add('active');
+}
+
+closeOrdersBtnEle.onclick = () => {
+    myOrdersEle.classList.remove('active');
+}
