@@ -10,3 +10,16 @@ menuBtn.onclick = () => {
 window.onscroll = () => {
     navbarMenuEle.classList.remove('active');
 }
+
+// User Account
+let accountBtnEle = document.querySelector('#account-btn');
+let userAccountEle = document.querySelector('.user-account');
+let closeAccountBtnEle = document.querySelector('#close-account');
+
+accountBtnEle.onclick = () => {
+    userAccountEle.classList.add('active');
+}
+
+closeAccountBtnEle.onclick = () => {
+    userAccountEle.classList.remove('active');
+}

@@ -16,8 +16,9 @@
 </head>
 <body>
     
+    <!-- Header section start -->
     <header class="header">
-        <section class="flex">
+        <div class="flex">
             <a href="/" class="logo">
                 <i class="fa-solid fa-pizza-slice"></i>
                 <span>Pizza 24h</span>
@@ -31,14 +32,58 @@
             </nav>
             <div class="icons">
                 <div id="menu-btn" class="fa-solid fa-bars"></div>
-                <div id="login-btn" class="fa-solid fa-user-large"></div>
+                <div id="account-btn" class="fa-solid fa-user-large"></div>
                 <div id="order-btn" class="fa-solid fa-box"></div>
                 <div id="cart-btn" class="fa-solid fa-basket-shopping"><span>(4)</span></div>
             </div>
-            
-        </section>
+        </div>
     </header>
+    <!-- Header section end -->
 
+    <!-- User-account section start -->
+    <section class="user-account">
+        <div id="close-account">
+            <span>close </span>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <div class="user">
+            <p>You are not logged <span>in now!</span></p>
+        </div>
+
+        <div class="display-orders">
+            <p>pizza 01 <span>( $3/ - x 2 )</span></p>
+            <p>pizza 03 <span>( $4/ - x 1 )</span></p>
+            <p>pizza 05 <span>( $5/ - x 1 )</span></p>
+            <p>pizza 07 <span>( $6/ - x 2 )</span></p>
+        </div>
+
+        <div class="form-account">
+            <form action="" method="POST" class="login-form">
+                <h3>Login now</h3>
+                <input type="email" name="email" id="email" class="input-box" required placeholder="your email">
+                <input type="password" name="password" id="password" class="input-box" required placeholder="*************">
+                <div class="remember">
+                    <div class="remember-me">
+                        <input type="checkbox" name="remember" id="remember-me">
+                        <label for="remember-me">Remember</label>
+                    </div>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <input type="submit" value="Login now" class="btn" name="login">
+            </form>
+
+            <form action="" method="POST" class="register-form">
+                <h3>Register</h3>
+                <input type="text" name="username" id="username" class="input-box" required placeholder="your name">
+                <input type="email" name="email" id="email" class="input-box" required placeholder="your email">
+                <input type="password" name="password" id="password" class="input-box" required placeholder="password">
+                <input type="password" name="confirm_password" id="confirm_password" class="input-box" required placeholder="confirm password">
+                <input type="submit" value="Register" class="btn" name="register">
+            </form>
+        </div>
+    </section>
+    <!-- User-account section end -->
 
 
     <!-- Custom javascript source from main.js -->
