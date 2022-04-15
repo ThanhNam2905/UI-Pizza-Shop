@@ -69,8 +69,31 @@ body {
     background-color: $light-bg-color;
 }
 
+section {
+    padding: 3.5rem 9%;
+}
+
+.btn {
+    display: block;
+    padding: 1.2rem 1.6rem;
+    width: 100%;
+    font-size: 1.8rem;
+    color: $black-color;
+    margin-top: 1.5rem;
+    border-radius: 0.5rem;
+    color: $white-color;
+    background-color: $red-color;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $black-color;
+    }
+}
+
+
+// CSS Header
 .header {
-    padding: 2.5rem 9%;
+    padding: 2.3rem 9%;
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 9999;
@@ -140,7 +163,190 @@ body {
     }
 }
 
+// CSS User account
+.user-account {
+    position: fixed;
+    top: 0;
+    right: -105%;
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    background-color: $white-color;
+    overflow-y: scroll;
+    transition: 0.5s ease-in;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
 
+    &.active {
+        right: 0;
+        transition: 0.5s ease-in;
+    }
+
+    &::-webkit-scrollbar {
+        width: 1.3rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $light-bg-color;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $red-color;
+    }
+
+    #close-account {
+        cursor: pointer;
+        position: absolute;
+        top: 3rem; right: 14rem;
+        display: inline-flex;
+        align-items: center;
+
+        &:hover {
+            
+            span, i {
+                color: $black-color;
+            }
+
+            span {
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            }
+
+            i {
+                transform: rotate(180deg) scale(1.2) translateX(2.5rem);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+
+        span {
+            @include graph-text(1.8rem);
+            color: $red-color;   
+        }
+        i {
+            font-size: 3rem;
+            color: $red-color;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+    }
+
+    .user {
+        text-align: center;
+        padding: 1.5rem 0;
+        background-color: $light-bg-color;
+        font-size: 1.8rem;
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+        
+        p {
+            text-transform: none;
+            color: $black-color;
+        }
+
+        span {
+            text-transform: none;
+            color: $red-color;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    .display-orders {
+        text-align: center;
+        padding: 3rem 2rem;
+        background-color: $light-bg-color;
+        border-radius: 0.5rem;
+        margin: 2.5rem 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        p {
+            padding: 1rem 2rem;
+            @include graph-text(1.8rem);
+            color: $light-color;
+            background-color: $white-color;
+            border-radius: 0.5rem;
+            box-shadow: $box-shadow;
+            text-transform: none;
+
+            span {
+                color: $red-color;
+                font-style: italic;
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .form-account {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        align-items: flex-start;
+
+        form {
+            flex: 1 1 40rem;
+            border-radius: 0.5rem;
+            background-color: $light-bg-color;
+            padding: 3rem;
+
+            h3 {
+                @include title-text(2.5rem);
+                color: $black-color;
+                text-align: center;
+                margin-bottom: 2.5rem;
+                text-transform: uppercase;
+            }
+
+            .input-box {
+                width: 100%;
+                margin-bottom: 2rem;
+                background-color: $white-color;
+                color: $black-color;
+                padding: 1rem 1.5rem;
+                border-radius: 0.5rem;
+                font-size: 1.6rem;
+                text-transform: none;
+                border: 0.2rem solid transparent;
+
+                &:focus {
+                    color: $red-color;
+                    border-color: $red-color;
+
+                    &::placeholder {
+                        color: $red-color;
+                    }
+                }
+            }
+
+            .remember {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 3rem;
+                font-size: 1.5rem;
+
+                .remember-me {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem; 
+                    color: $black-color;
+                }
+
+                a {
+                    color: $black-color;
+
+                    &:hover {
+                        color: $red-color;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    
+}
 
 
 
