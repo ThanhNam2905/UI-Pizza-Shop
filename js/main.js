@@ -46,8 +46,24 @@ closeCartBtnEle.onclick = () => {
     shoppingCartEle.classList.remove('active');
 }
 
-
-
+// OnScroll
 window.onscroll = () => {
     navbarMenuEle.classList.remove('active');
+}
+
+
+// Home Slides
+let slides = document.querySelectorAll('.home-bg .home .slide-container .slide');
+let index = 0;
+
+const nextSlide = () => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+}
+
+const prevSlide = () => {
+    slides[index].classList.remove('active');
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add('active');
 }
