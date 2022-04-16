@@ -96,6 +96,12 @@ section {
     text-align: center;
     margin-bottom: 2.5rem;
     text-transform: uppercase;
+
+    span {
+        color: $red-color;
+        text-transform: uppercase;
+        font-style: italic;
+    }
 }
 
 
@@ -729,7 +735,76 @@ section {
     }
 }
 
+// CSS Menu
+.menu {
 
+    .box-container {
+        @include grid(30rem);
+        gap: 3rem;
+
+        .box {
+            text-align: center;
+            position: relative;
+            background-color: $white-color;
+            padding: 3rem 2rem;
+            border-radius: 0.5rem;
+            box-shadow: $box-shadow;
+            cursor: pointer;
+
+            &:hover {
+                transform: translateY(-1rem);
+            }
+
+            .price {
+                position: absolute;
+                top: 1.2rem; left: 1.5rem;
+                background-color: $red-color;
+                color: $white-color;
+                font-size: 1.5rem;
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+
+                span {
+                    font-size: 1.9rem;
+                    font-weight: 800;
+                }
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .name {
+                @include title-text(2rem);
+                color: $black-color;
+                margin: 1.5rem 0;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+            }
+
+            .buy-now {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+
+                input {
+                    border: 0.2rem solid $red-color;
+                    padding: 1rem 1.6rem;
+                    color: $black-color;
+                    font-size: 1.9rem;
+                    border-radius: 0.5rem;
+                }
+
+                .btn {
+                    margin-top: 0rem;
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -836,6 +911,11 @@ section {
         }
     }
 
+    .menu {
+        .box-container {
+            gap: 4.5rem;
+        }
+    }
 }
 
 @media (max-width: 640px) {
@@ -907,6 +987,13 @@ section {
                     object-fit: cover;
                 }
             }
+        }
+    }
+
+    .menu {
+        .box-container {
+            gap: 4rem;
+            grid-template-columns: 1fr;
         }
     }
 }
