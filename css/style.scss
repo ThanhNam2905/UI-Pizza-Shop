@@ -90,6 +90,14 @@ section {
     }
 }
 
+.heading {
+    @include title-text(3.6rem);
+    color: $black-color;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+}
+
 
 // CSS Header
 .header {
@@ -684,6 +692,43 @@ section {
     }
 }
 
+// CSS About 
+.about {
+
+    .box-container {
+        @include grid(30rem);
+        gap: 3rem;
+
+        .box {
+            padding: 2.5rem;
+            border: $border;
+            border-radius: 0.5rem;
+            box-shadow: $box-shadow;
+            text-align: center;
+            background-color: $white-color;
+
+            img {
+                height: 22rem;
+                width: 100%;
+            }
+
+            h4 {
+                @include title-text(2.2rem);
+                color: $black-color;
+                margin: 1rem 0;
+            }
+
+            p {
+                @include graph-text(1.6rem);
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
 
 
 
@@ -848,6 +893,19 @@ section {
                 height: 3.5rem;
                 line-height: 3.5rem;
                 font-size: 2rem;
+            }
+        }
+    }
+
+    .about {
+        .box-container {
+            grid-template-columns: 1fr;
+            .box {
+                img {
+                    height: 19rem;
+                    width: 100%;
+                    object-fit: cover;
+                }
             }
         }
     }
