@@ -442,6 +442,164 @@ section {
 }
 
 
+// CSS Shopping Cart
+.shopping-cart {
+    position: fixed;
+    top: 0;
+    right: -105%;
+    z-index: 9999;
+    width: 48rem;
+    height: 100vh;
+    background-color: $light-bg-color;
+    overflow-y: scroll;
+    padding: 3rem 2.5rem;
+    border-left: 0.2rem solid $light-color;
+    transition: 0.5s ease-in-out;
+
+    &.active {
+        right: 0;
+        transition: 0.5s ease-in-out;
+    }
+
+    &::-webkit-scrollbar {
+        width: 1.3rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $light-bg-color;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $red-color;
+    }
+
+    #close-cart {
+        cursor: pointer;
+        position: absolute;
+        top: 1.5rem; right: 1.2rem;
+        display: inline-flex;
+        align-items: center;
+
+        &:hover {
+            span, i {
+                color: $black-color;
+            }
+            span {
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            }
+            i {
+                transform: rotate(180deg) scale(1.2) translateX(2.5rem);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+
+        span {
+            @include graph-text(1.8rem);
+            color: $red-color;   
+        }
+        i {
+            font-size: 2.3rem;
+            color: $red-color;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+    }
+
+    .title {
+        @include title-text(2.3rem);
+        color: $black-color;
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+
+    .box-container {
+        .box {
+            padding: 1.8rem 2rem;
+            margin-bottom: 2.5rem;
+            border-radius: 0.5rem;
+            position: relative;
+            background-color: $white-color;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            .delete-item {
+                position: absolute;
+                top: 0.8rem; right: 1.5rem;
+                font-size: 1.9rem;
+                color: $light-color;
+                cursor: pointer;
+
+                &:hover {
+                    color: $red-color;
+                    transform: translateY(-0.5rem);
+                }
+            }
+
+            img {
+                width: 8rem;
+                height: 8rem;
+                object-fit: cover;
+            }
+
+            .content {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 2rem;
+
+                .info {
+                    width: 14rem;
+
+                    .name {
+                        @include title-text(1.6rem);
+                        color: $black-color;
+                        text-transform: none;
+                        margin-bottom: 0.5rem;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                    }
+                    .price {
+                        @include graph-text(1.45rem);
+                        color: $black-color;
+                        font-style: italic;
+                        color: $red-color;
+                    }
+                }
+                .quantity {
+                    display: flex;
+                    align-items: center;
+                    
+                    border-radius: 0.5rem;
+                    border: 0.2rem solid $light-color;
+
+                    span {
+                        font-size: 1.4rem;
+                        cursor: pointer;
+                        padding: 0 0.8rem;
+
+                        &:hover {
+                            color: $red-color;
+                            transform: scale(1.4);
+                        }
+                    }
+
+                    .qty {
+                        @include graph-text(1.6rem);
+                        color: $red-color;
+                        font-weight: 600;
+                        width: 4.5rem;
+                        text-align: center;
+                        border-left: 0.2rem solid $light-color;
+                        border-right: 0.2rem solid $light-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 // Media queries - Responsive Design
@@ -546,5 +704,10 @@ section {
         width: 100%;
         border-left: none;
         padding: 3rem;
+    }
+
+    .shopping-cart {
+        width: 100%;
+        border-left: none;
     }
 }

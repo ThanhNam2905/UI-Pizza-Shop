@@ -7,10 +7,6 @@ menuBtn.onclick = () => {
     menuBtn.classList.toggle('fa-xmark');
 }
 
-window.onscroll = () => {
-    navbarMenuEle.classList.remove('active');
-}
-
 // User Account
 let accountBtnEle = document.querySelector('#account-btn');
 let userAccountEle = document.querySelector('.user-account');
@@ -35,4 +31,23 @@ orderBtnEle.onclick = () => {
 
 closeOrdersBtnEle.onclick = () => {
     myOrdersEle.classList.remove('active');
+}
+
+// Shopping Cart
+let cartBtnEle = document.querySelector('#cart-btn');
+let shoppingCartEle = document.querySelector('.shopping-cart');
+let closeCartBtnEle = document.querySelector('#close-cart');
+
+cartBtnEle.onclick = () => {
+    shoppingCartEle.classList.add('active');
+}
+
+closeCartBtnEle.onclick = () => {
+    shoppingCartEle.classList.remove('active');
+}
+
+
+
+window.onscroll = () => {
+    navbarMenuEle.classList.remove('active');
 }
