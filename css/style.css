@@ -67,6 +67,15 @@ section {
   background-color: #333;
 }
 
+.heading {
+  font-size: 3.6rem;
+  color: #fff;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+}
+
 .header {
   padding: 2.3rem 9%;
   position: fixed;
@@ -809,6 +818,47 @@ section {
   background-color: #e74c3c;
 }
 
+.about .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 3rem;
+  gap: 3rem;
+}
+
+.about .box-container .box {
+  padding: 2.5rem;
+  border: 0.15rem solid #777;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+}
+
+.about .box-container .box img {
+  height: 22rem;
+  width: 100%;
+}
+
+.about .box-container .box h4 {
+  font-size: 2.2rem;
+  color: #fff;
+  color: #333;
+  margin: 1rem 0;
+}
+
+.about .box-container .box p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
 @media (max-width: 1024px) {
   html {
     font-size: 57%;
@@ -921,6 +971,16 @@ section {
     height: 3.5rem;
     line-height: 3.5rem;
     font-size: 2rem;
+  }
+  .about .box-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about .box-container .box img {
+    height: 19rem;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 /*# sourceMappingURL=style.css.map */
