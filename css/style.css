@@ -76,6 +76,12 @@ section {
   text-transform: uppercase;
 }
 
+.heading span {
+  color: #e74c3c;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
 .header {
   padding: 2.3rem 9%;
   position: fixed;
@@ -859,6 +865,86 @@ section {
   overflow: hidden;
 }
 
+.menu .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 3rem;
+  gap: 3rem;
+}
+
+.menu .box-container .box {
+  text-align: center;
+  position: relative;
+  background-color: #fff;
+  padding: 3rem 2rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.menu .box-container .box:hover {
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.menu .box-container .box .price {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.5rem;
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.menu .box-container .box .price span {
+  font-size: 1.9rem;
+  font-weight: 800;
+}
+
+.menu .box-container .box img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu .box-container .box .name {
+  font-size: 2rem;
+  color: #fff;
+  color: #333;
+  margin: 1.5rem 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.menu .box-container .box .buy-now {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.menu .box-container .box .buy-now input {
+  border: 0.2rem solid #e74c3c;
+  padding: 1rem 1.6rem;
+  color: #333;
+  font-size: 1.9rem;
+  border-radius: 0.5rem;
+}
+
+.menu .box-container .box .buy-now .btn {
+  margin-top: 0rem;
+}
+
 @media (max-width: 1024px) {
   html {
     font-size: 57%;
@@ -930,6 +1016,9 @@ section {
   .my-orders #close-orders {
     right: 1.7rem;
   }
+  .menu .box-container {
+    gap: 4.5rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -981,6 +1070,11 @@ section {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .menu .box-container {
+    gap: 4rem;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=style.css.map */
