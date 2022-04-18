@@ -806,7 +806,70 @@ section {
     }
 }
 
+// CSS Order
+.order {
+    
+    .form-order {
+        background-color: $white-color;
+        box-shadow: $box-shadow;
+        padding: 3rem 2.5rem;
+        border-radius: 0.5rem;
 
+        .display-orders {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            padding: 2.5rem;
+            background-color: $light-bg-color;
+            border-radius: 0.5rem;
+
+            p {
+                padding: 1rem 2rem;
+                font-size: 1.8rem;
+                color: $black-color;
+                background-color: $white-color;
+                border-radius: 0.5rem;
+
+                span {
+                    color: $red-color;
+                }
+            }
+        }
+
+        .form-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 2.3rem;
+            margin-top: 3.5rem;
+            
+            .input-box {
+                width: 49%;
+
+                span {
+                    @include graph-text(1.7rem);
+                    color: $black-color;
+                    text-transform: none;
+                }
+
+                .box {
+                    width: 100%;
+                    font-size: 1.6rem;
+                    padding: 0.8rem 1.4rem;
+                    background-color: $light-bg-color;
+                    color: $light-color;
+                    border-radius: 0.5rem;
+                    margin-top: 0.5rem;
+                    text-transform: none;
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -855,6 +918,16 @@ section {
             }
         }
     }
+
+    .order .form-order {
+        padding: 3.5rem;
+        
+        .form-container {
+            .input-box {
+                width: 48%;
+            }
+        }
+    } 
 }
 
 @media (max-width: 768px) {
@@ -914,6 +987,12 @@ section {
     .menu {
         .box-container {
             gap: 4.5rem;
+        }
+    }
+
+    .order .form-order .form-container {
+        .input-box {
+            width: 100%;
         }
     }
 }

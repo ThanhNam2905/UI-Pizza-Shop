@@ -366,6 +366,54 @@
         </div>
     </section>
     <!-- Menu section end -->
+
+    <!-- Order section start -->
+    <section class="order" id="order">
+        <h1 class="heading"><span>Order</span> now</h1>
+
+        <form action="" method="post" class="form-order">
+            <div class="display-orders">
+                <p>pizza 01 <span>( $3/ - x 2 )</span></p>
+                <p>pizza 03 <span>( $4/ - x 1 )</span></p>
+                <p>pizza 05 <span>( $5/ - x 1 )</span></p>
+                <p>pizza 07 <span>( $6/ - x 2 )</span></p>
+            </div>
+            <div class="form-container">
+                <div class="input-box">
+                    <span>Your name: </span>
+                    <input type="text" name="username" class="box" required>
+                </div>
+                <div class="input-box">
+                    <span>Your number: </span>
+                    <input type="number" name="numberphone" class="box" required>
+                </div>
+                <div class="input-box">
+                    <span>Payment method</span>
+                    <select name="payment" class="box">
+                        <option value="0">cash on delivery</option>
+                        <option value="1">credit card</option>
+                        <option value="2">Paypal</option>
+                        <option value="3">Payeer</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <span>Address province / city: </span>
+                    <input type="text" name="province" class="box" required placeholder="e.g. province / city">
+                </div>
+                <div class="input-box">
+                    <span>Address district: </span>
+                    <input type="text" name="district" class="box" required placeholder="e.g. district.">
+                </div>
+                <div class="input-box">
+                    <span>Address wards / commune : </span>
+                    <input type="text" name="wards" class="box" required placeholder="e.g. wards / commune.">
+                </div>
+    
+                <input type="submit" name="order-now" class="btn" value="order now">
+            </div>
+        </form>
+    </section>
+    <!-- Order section end -->
     
 
 
