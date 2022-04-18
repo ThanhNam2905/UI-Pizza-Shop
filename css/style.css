@@ -945,6 +945,84 @@ section {
   margin-top: 0rem;
 }
 
+.order .form-order {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 3rem 2.5rem;
+  border-radius: 0.5rem;
+}
+
+.order .form-order .display-orders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 2.5rem;
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+}
+
+.order .form-order .display-orders p {
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  color: #333;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.order .form-order .display-orders p span {
+  color: #e74c3c;
+}
+
+.order .form-order .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2.3rem;
+  margin-top: 3.5rem;
+}
+
+.order .form-order .form-container .input-box {
+  width: 49%;
+}
+
+.order .form-order .form-container .input-box span {
+  font-size: 1.7rem;
+  line-height: 1.7;
+  color: #777;
+  color: #333;
+  text-transform: none;
+}
+
+.order .form-order .form-container .input-box .box {
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 0.8rem 1.4rem;
+  background-color: #f5f5f5;
+  color: #777;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  text-transform: none;
+}
+
 @media (max-width: 1024px) {
   html {
     font-size: 57%;
@@ -976,6 +1054,12 @@ section {
     height: 4rem;
     line-height: 4rem;
     font-size: 2rem;
+  }
+  .order .form-order {
+    padding: 3.5rem;
+  }
+  .order .form-order .form-container .input-box {
+    width: 48%;
   }
 }
 
@@ -1018,6 +1102,9 @@ section {
   }
   .menu .box-container {
     gap: 4.5rem;
+  }
+  .order .form-order .form-container .input-box {
+    width: 100%;
   }
 }
 
