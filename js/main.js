@@ -67,3 +67,13 @@ const prevSlide = () => {
     index = (index - 1 + slides.length) % slides.length;
     slides[index].classList.add('active');
 }
+
+// FAQ Accordion
+let accordionList = document.querySelectorAll('.faq .accordion-container .accordion-box');
+
+accordionList.forEach(item => {
+    item.onclick = () => {
+        accordionList.forEach(itemRemove => itemRemove.classList.remove('active'));
+        item.classList.toggle('active');
+    }
+})

@@ -1023,6 +1023,78 @@ section {
   text-transform: none;
 }
 
+.faq .accordion-container {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.faq .accordion-container .accordion-box {
+  margin: 2.2rem 0;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.faq .accordion-container .accordion-box.active .accordion-content {
+  display: inline-block;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+}
+
+.faq .accordion-container .accordion-box.active .accordion-heading {
+  background-color: #e74c3c;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+}
+
+.faq .accordion-container .accordion-box.active .accordion-heading span {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+}
+
+.faq .accordion-container .accordion-box .accordion-heading {
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 0.5rem;
+}
+
+.faq .accordion-container .accordion-box .accordion-heading h2 {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: none;
+}
+
+.faq .accordion-container .accordion-box .accordion-heading span {
+  font-size: 2rem;
+}
+
+.faq .accordion-container .accordion-box .accordion-content {
+  background-color: #fff;
+  padding: 2rem;
+  text-transform: none;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  color: #777;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  display: none;
+}
+
 @media (max-width: 1024px) {
   html {
     font-size: 57%;
