@@ -850,6 +850,8 @@ section {
             .input-box {
                 width: 49%;
 
+                
+
                 span {
                     @include graph-text(1.7rem);
                     color: $black-color;
@@ -865,6 +867,10 @@ section {
                     border-radius: 0.5rem;
                     margin-top: 0.5rem;
                     text-transform: none;
+
+                    &:focus {
+                        background-color: #c0f5f597;
+                    }
                 }
             }
         }
@@ -938,6 +944,139 @@ section {
     }
 }
 
+// CSS Footer
+.footer {
+    padding: 4rem 9%;
+    background-color: $white-color;
+
+    .footer-container {
+        @include grid(25rem);
+        gap: 2rem;
+        align-items: flex-start;
+
+        .box {
+
+            .logo {
+                font-size: 2.6rem;
+                margin-bottom: 1rem;
+
+                i {
+                    color: $red-color;
+                }
+
+                span {
+                    color: $black-color;
+                    margin-left: 0.5rem;
+                    font-weight: 700;
+                    font-style: italic;
+                }
+            }
+
+            .info, p {
+                @include graph-text(1.6rem);
+                color: $black-color;
+                margin: 1rem 0;
+                text-transform: none;
+            }
+
+            .address, .opening-time, .phone, .mailto {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                margin: 1.5rem 0;
+            
+                i {
+                    font-size: 1.8rem;
+                    color: $red-color;
+                }
+
+                address, span, a {
+                    font-size: 1.5rem;
+                    color: $light-color;
+                    text-transform: none;
+                }
+            }
+
+            h3 {
+                @include title-text(2.5rem);
+                color: $black-color;
+                margin-bottom: 1.8rem;
+            }
+
+            a {
+                @include graph-text(1.6rem);
+                color: $black-color;
+                display: block;
+                margin-bottom: 1.2rem;
+
+                &:hover {
+                    color: $red-color;
+                    text-decoration: underline;
+                    text-underline-offset: 0.4rem;
+                    font-weight: 800;
+                    font-style: italic;
+                    i {
+                        padding-right: 1.4rem;
+                    }
+                }
+
+                i {
+                    padding-right: 0.7rem;  
+                }
+            }
+
+            .form-subscribes {
+                margin-top: 1.5rem;
+
+                .input-box {
+                    width: 100%;
+                    border: 0.2rem solid $red-color;
+                    border-radius: 0.5rem;
+                    padding: 0.9rem 1.2rem;
+                    font-size: 1.6rem;
+                    color: $red-color;
+                    text-transform: none;
+
+                    &::placeholder {
+                        color: $red-color;
+                    }
+
+                    &:focus {
+                        background-color: $red-color;
+                        color: $white-color;
+
+                        &::placeholder {
+                            color: $white-color;
+                        }
+                    }
+                }
+
+                .btn {
+                    display: inline-block;
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+
+    .credit-footer {
+        text-align: center;
+        @include title-text(2.2rem);
+        color: $black-color;
+        padding-top: 4rem;
+        margin-top: 2rem;
+        border-top: 0.2rem solid $red-color;
+
+        span {
+            font-style: italic;
+            text-decoration: underline;
+            text-underline-offset: 0.3rem;
+            color: $light-color;
+        }
+    }
+}
+
+
 
 // Media queries - Responsive Design
 @media (max-width: 1024px) {
@@ -1007,8 +1146,10 @@ section {
                 left: 0;
                 right: 0;
                 position: absolute;
+                z-index: 99999999;
                 border-bottom: $border;
                 border-top: $border;
+                background-color: $white-color;
                 padding: 1.5rem 3rem;
                 clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
@@ -1138,6 +1279,18 @@ section {
         .box-container {
             gap: 4rem;
             grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: 340px) { 
+    .header .flex .logo {
+        i {
+            display: none;
+        }
+
+        span {
+            font-size: 2.1rem;
         }
     }
 }
