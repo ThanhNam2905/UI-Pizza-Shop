@@ -1023,6 +1023,10 @@ section {
   text-transform: none;
 }
 
+.order .form-order .form-container .input-box .box:focus {
+  background-color: #c0f5f597;
+}
+
 .faq .accordion-container {
   max-width: 75rem;
   margin: 0 auto;
@@ -1095,6 +1099,175 @@ section {
   display: none;
 }
 
+.footer {
+  padding: 4rem 9%;
+  background-color: #fff;
+}
+
+.footer .footer-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 3rem;
+  gap: 2rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.footer .footer-container .box .logo {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.footer .footer-container .box .logo i {
+  color: #e74c3c;
+}
+
+.footer .footer-container .box .logo span {
+  color: #333;
+  margin-left: 0.5rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.footer .footer-container .box .info, .footer .footer-container .box p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  color: #333;
+  margin: 1rem 0;
+  text-transform: none;
+}
+
+.footer .footer-container .box .address, .footer .footer-container .box .opening-time, .footer .footer-container .box .phone, .footer .footer-container .box .mailto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.footer .footer-container .box .address i, .footer .footer-container .box .opening-time i, .footer .footer-container .box .phone i, .footer .footer-container .box .mailto i {
+  font-size: 1.8rem;
+  color: #e74c3c;
+}
+
+.footer .footer-container .box .address address, .footer .footer-container .box .address span, .footer .footer-container .box .address a, .footer .footer-container .box .opening-time address, .footer .footer-container .box .opening-time span, .footer .footer-container .box .opening-time a, .footer .footer-container .box .phone address, .footer .footer-container .box .phone span, .footer .footer-container .box .phone a, .footer .footer-container .box .mailto address, .footer .footer-container .box .mailto span, .footer .footer-container .box .mailto a {
+  font-size: 1.5rem;
+  color: #777;
+  text-transform: none;
+}
+
+.footer .footer-container .box h3 {
+  font-size: 2.5rem;
+  color: #fff;
+  color: #333;
+  margin-bottom: 1.8rem;
+}
+
+.footer .footer-container .box a {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  color: #333;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.footer .footer-container .box a:hover {
+  color: #e74c3c;
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.footer .footer-container .box a:hover i {
+  padding-right: 1.4rem;
+}
+
+.footer .footer-container .box a i {
+  padding-right: 0.7rem;
+}
+
+.footer .footer-container .box .form-subscribes {
+  margin-top: 1.5rem;
+}
+
+.footer .footer-container .box .form-subscribes .input-box {
+  width: 100%;
+  border: 0.2rem solid #e74c3c;
+  border-radius: 0.5rem;
+  padding: 0.9rem 1.2rem;
+  font-size: 1.6rem;
+  color: #e74c3c;
+  text-transform: none;
+}
+
+.footer .footer-container .box .form-subscribes .input-box::-webkit-input-placeholder {
+  color: #e74c3c;
+}
+
+.footer .footer-container .box .form-subscribes .input-box:-ms-input-placeholder {
+  color: #e74c3c;
+}
+
+.footer .footer-container .box .form-subscribes .input-box::-ms-input-placeholder {
+  color: #e74c3c;
+}
+
+.footer .footer-container .box .form-subscribes .input-box::placeholder {
+  color: #e74c3c;
+}
+
+.footer .footer-container .box .form-subscribes .input-box:focus {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.footer .footer-container .box .form-subscribes .input-box:focus::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.footer .footer-container .box .form-subscribes .input-box:focus:-ms-input-placeholder {
+  color: #fff;
+}
+
+.footer .footer-container .box .form-subscribes .input-box:focus::-ms-input-placeholder {
+  color: #fff;
+}
+
+.footer .footer-container .box .form-subscribes .input-box:focus::placeholder {
+  color: #fff;
+}
+
+.footer .footer-container .box .form-subscribes .btn {
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.footer .credit-footer {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #fff;
+  color: #333;
+  padding-top: 4rem;
+  margin-top: 2rem;
+  border-top: 0.2rem solid #e74c3c;
+}
+
+.footer .credit-footer span {
+  font-style: italic;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  color: #777;
+}
+
 @media (max-width: 1024px) {
   html {
     font-size: 57%;
@@ -1144,8 +1317,10 @@ section {
     left: 0;
     right: 0;
     position: absolute;
+    z-index: 99999999;
     border-bottom: 0.15rem solid #777;
     border-top: 0.15rem solid #777;
+    background-color: #fff;
     padding: 1.5rem 3rem;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -1234,6 +1409,15 @@ section {
     gap: 4rem;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 340px) {
+  .header .flex .logo i {
+    display: none;
+  }
+  .header .flex .logo span {
+    font-size: 2.1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
