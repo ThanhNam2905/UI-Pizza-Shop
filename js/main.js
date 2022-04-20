@@ -77,3 +77,35 @@ accordionList.forEach(item => {
         item.classList.toggle('active');
     }
 })
+
+// Scroll To Top
+let scrollTopBtn =document.querySelector('#scroll-top i');
+
+scrollTopBtn.onclick = () => {
+    scrollTo({
+        behavior: 'smooth',
+        top: 0
+    })
+}
+
+window.onscroll = () => {
+    if(scrollY > 300) {
+        scrollTopBtn.classList.add('active');
+    }
+    else {
+        scrollTopBtn.classList.remove('active');
+    }
+}
+
+// Loading Page 
+let loadingPage = document.querySelector('#loading-page');
+
+function loading () {
+    loadingPage.classList.add('active');
+}
+
+function fadeOut () {
+    setInterval(loading, 3500);
+}
+
+window.onload = fadeOut();
